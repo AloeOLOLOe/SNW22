@@ -8,10 +8,9 @@
 
 }
 
-.dialogsItems .active{
+.dialogsItems .active {
     color: gold;
 }
-
 
 
 .messages {
@@ -20,5 +19,6 @@
 }
 
 .messages .message {
+    color: white
 
 }
