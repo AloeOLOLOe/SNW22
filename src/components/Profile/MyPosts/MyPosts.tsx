@@ -7,7 +7,9 @@ export const MyPosts = () => {
 
     let posts = [
         {id: 0, message: "hello", likesCount: 11},
-        {id: 1, message: "bye", likesCount: 22}
+        {id: 1, message: "bye", likesCount: 22},
+        {id: 1, message: "2322", likesCount: 22},
+        {id: 1, message: "2333322", likesCount: 22}
     ]
     let postElements = posts.map(p => <Post message={p.message} likesCount={p.likesCount}/>)
 
