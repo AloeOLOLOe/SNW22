@@ -4,7 +4,6 @@ import s from './Post.module.css'
 export type MessageType = {
     message: string
     likesCount: number
-
 }
 export const Post: React.FC<MessageType> = (props) => {
 

@@ -1,17 +1,13 @@
 import React from "react";
 import s from "./MyPosts.module.css"
 import {Post} from "./Post/Post";
+import {ProfilePageType} from "../Profile";
 
 
-export const MyPosts = () => {
+export const MyPosts:React.FC<ProfilePageType> = (props) => {
 
-    let posts = [
-        {id: 0, message: "hello", likesCount: 11},
-        {id: 1, message: "bye", likesCount: 22},
-        {id: 1, message: "2322", likesCount: 22},
-        {id: 1, message: "2333322", likesCount: 22}
-    ]
-    let postElements = posts.map(p => <Post message={p.message} likesCount={p.likesCount}/>)
+
+    let postElements = props.posts.map(p => <Post message={p.message} likesCount={p.likesCount}/>)
 
     return (
         <div className={s.postBlock}>
