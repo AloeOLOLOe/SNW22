@@ -7,8 +7,8 @@ import {Dialogs} from "./components/Profile/Dialogs/Dialogs";
 import {BrowserRouter, Route} from "react-router-dom";
 import {RootStateType} from "./redux/state";
 
-
-const App: React.FC<RootStateType> = (props) => {
+type HolySheetType={state:RootStateType}
+const App:React.FC<HolySheetType> = (props) => {
 
     return (
         <BrowserRouter>
@@ -17,9 +17,9 @@ const App: React.FC<RootStateType> = (props) => {
                 <Header/>
                 <Navbar/>
                 <div className='app-wrapper-content'>
-                    <Route path='/profile' render={() => <Profile posts={props.profilePage.posts}/>}/>
-                    <Route path='/dialogs' render={() => <Dialogs dialogs={props.dialogsPage.dialogs}
-                                                                  messages={props.dialogsPage.messages}/>}/>
+                    <Route path='/profile' render={() => <Profile posts={props.state.profilePage.posts}/>}/>
+                    <Route path='/dialogs' render={() => <Dialogs dialogs={props.state.dialogsPage.dialogs}
+                                                                  messages={props.state.dialogsPage.messages}/>}/>
                 </div>
 
 
