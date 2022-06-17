@@ -22,7 +22,7 @@ export type RootStateType = {
     profilePage: ProfilePageType,
     dialogsPage: DialogsPageType
 }
-
+export type HolySheetType={state:RootStateType}
 export let state = {
     profilePage: {
         posts: [

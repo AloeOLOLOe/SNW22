@@ -5,9 +5,9 @@ import {Navbar} from "./components/Navbar/Navbar";
 import {Profile} from "./components/Profile/Profile";
 import {Dialogs} from "./components/Profile/Dialogs/Dialogs";
 import {BrowserRouter, Route} from "react-router-dom";
-import {RootStateType} from "./redux/state";
+import {HolySheetType, RootStateType} from "./redux/state";
 
-type HolySheetType={state:RootStateType}
+
 const App:React.FC<HolySheetType> = (props) => {
 
     return (
