@@ -27,7 +27,7 @@ export const Dialogs: React.FC<DialogsPageType> = (props) => {
                 </div>
 
             </div>
-            <div >
+            <div>
                 <textarea ref={newPostText}></textarea>
                 <button onClick={addAlert}></button>
             </div>
