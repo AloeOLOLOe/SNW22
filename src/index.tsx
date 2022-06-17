@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import {state} from "./redux/state";
+import {addPost} from "./redux/state";
 
 ReactDOM.render(
-    <App state={state}/>,
+    <App state={state}  addPostCallBack={addPost} />,
 
     document.getElementById('root')
 );

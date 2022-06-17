@@ -8,7 +8,7 @@ import {DialogsPageType} from "../../../redux/state";
 export const Dialogs: React.FC<DialogsPageType> = (props) => {
 
     let dialogsElements = props.dialogs.map(d => <div><DialogItem name={d.name} id={d.id}/></div>)
-    let messageElements = props.messages.map(m => <Message message={m.message}/>)
+    let messageElements = props.messages.map(m => <Message id={m.id} message={m.message}/>)
 
     let newPostText=React.createRef<HTMLTextAreaElement>();
     let addAlert=()=>{
