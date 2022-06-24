@@ -3,17 +3,22 @@ import s from "./MyPosts.module.css"
 import {Post} from "./Post/Post";
 
 import {ProfilePropsType} from "../Profile";
+import {PostType} from "../../../redux/state";
 
-
-export const MyPosts: React.FC<ProfilePropsType> = (props) => {
+type MyPostsPropsType={
+    posts: Array<PostType>;
+    addPostCallBack:(postMessage: string) => void
+}
+export const MyPosts: React.FC<MyPostsPropsType> = (props) => {
 
 
     let postElements = props.posts.map(p => <Post id={p.id} message={p.message} likesCount={p.likesCount}/>)
 
     let newPostElement = React.createRef<HTMLTextAreaElement>()
     let addPost = () => {
-        if(newPostElement.current){
-         props.addPostCallBack(newPostElement.current.value)}
+        if (newPostElement.current) {
+            props.addPostCallBack(newPostElement.current.value)
+        }
 
     }
 

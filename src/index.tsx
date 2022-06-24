@@ -1,12 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import {state} from "./redux/state";
-import {addPost} from "./redux/state";
+import {rerenderEntireTree} from "./render";
 
+/*export let rerenderEntireTree=()=>{
 ReactDOM.render(
+    <BrowserRouter>
     <App state={state}  addPostCallBack={addPost} />,
 
-    document.getElementById('root')
-);
+    </BrowserRouter>,document.getElementById('root')
+);}*/
+rerenderEntireTree(state)
